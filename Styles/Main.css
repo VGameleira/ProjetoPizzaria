@@ -4,12 +4,15 @@
     border: 1px solid black;
     
 }
-
+/* header */
 header {
     
     width: 100vw;
     height: 136px;
-    background-color: white
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -17,8 +20,44 @@ header {
     font-weight: bold;
     color: black;
     font-family: "Inter", sans-serif;
+    font-size: 48px;
+}
+.header__title--blue{
+    color: aqua;
 }
 
+
+/* Titulos */
 h1{
     text-align: center;
 }
+
+
+/* footer */
+footer{
+    width: 100vw;
+    height: 115px;
+    background-color: rgb(69, 134, 219);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer__columns{
+    width: 16%;
+    text-align: center;
+} 
+
+.footer__social{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer__social-icon{
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    
+}
+
