@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-*{
+* {
     border: 1px solid black;
-    
+
 }
+
 /* header */
 header {
-    
+
     width: 100vw;
-    height: 136px;
+    height: 20vh;
     background-color: blue;
     display: flex;
     justify-content: center;
@@ -16,48 +17,98 @@ header {
 
 }
 
-.header__title{
+.header__title {
     font-weight: bold;
     color: black;
     font-family: "Inter", sans-serif;
     font-size: 48px;
 }
-.header__title--blue{
+
+.header__title--blue {
     color: aqua;
 }
 
 
 /* Titulos */
-h1{
+h1 {
     text-align: center;
 }
 
 
+/* Main */
+
+main {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+
+    background-image: url(./../image/Background-pizzaria.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 350px 0;
+
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 608px;
+    height: 204px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    
+    border-radius: 25px;
+    background-color: #c5c2c2;
+    box-shadow: 0px 4px 4px 0px black;
+    
+    position: relative;
+    left: 100px; 
+}
+
+.form__input {
+    /* width: 50%; */
+    width: 320px;
+    height: 24px;
+}
+
+.form__btn {
+    border-radius: 20px;
+    padding: 16px 32px;
+    background-color: #5884bd;
+    color: #fff;
+    border: none;
+    box-shadow: 0px 4px 4px 0px black;
+}
+
+.form__btn--action {
+    background-color: green;
+}
+
 /* footer */
-footer{
+footer {
     width: 100vw;
-    height: 115px;
+    height: 20vh;
     background-color: rgb(69, 134, 219);
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.footer__columns{
+.footer__columns {
     width: 16%;
     text-align: center;
-} 
+}
 
-.footer__social{
+.footer__social {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.footer__social-icon{
+.footer__social-icon {
     text-decoration: none;
     color: black;
     font-size: 24px;
-    
-}
 
+}
