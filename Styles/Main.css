@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+:root{
+    --cor-primaria: #a753eb;
+    --cor-secundaria: #00ffff;
+    --cor-action: #008000;
+
+}
+
 * {
     border: 1px solid black;
 
@@ -10,7 +17,7 @@ header {
 
     width: 100vw;
     height: 20vh;
-    background-color: blue;
+    background-color: var(--cor-primaria);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,7 +32,7 @@ header {
 }
 
 .header__title--blue {
-    color: aqua;
+    color: var(--cor-secundaria);
 }
 
 
@@ -75,21 +82,26 @@ main {
 .form__btn {
     border-radius: 20px;
     padding: 16px 32px;
-    background-color: #5884bd;
+    background-color: var(--cor-secundaria);
     color: #fff;
     border: none;
     box-shadow: 0px 4px 4px 0px black;
 }
+.form__btn:hover{
+    background-color: purple;
+    color: black;
+    /* border: 2px solid black; */
+}
 
 .form__btn--action {
-    background-color: green;
+    background-color: #008000;
 }
 
 /* footer */
 footer {
     width: 100vw;
     height: 20vh;
-    background-color: rgb(69, 134, 219);
+    background-color: var(--cor-primaria);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -98,6 +110,7 @@ footer {
 .footer__columns {
     width: 16%;
     text-align: center;
+    line-height: 20px;
 }
 
 .footer__social {
