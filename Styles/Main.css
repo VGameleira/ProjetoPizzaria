@@ -49,7 +49,7 @@ main {
     display: flex;
     align-items: center;
 
-    background-image: url(./../image/Background-pizzaria.jpg);
+    background-image: url(./../images/Background-pizzaria.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 350px 0;
