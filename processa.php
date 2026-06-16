@@ -1,47 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/Main.css">
-
-    <script src="https://kit.fontawesome.com/ab63973773.js" crossorigin="anonymous" defer></script>
-
-
-    <title>Pizzaria</title>
+    <title>Login Recebido - Pizzaria</title>
 </head>
-
 <body>
     <header class="header">
         <h1 class="header__title">Pizzas -
-            <span class="header__title--blue">Menu</span>
+            <span class="header__title--blue">Login</span>
         </h1>
     </header>
 
-
     <main>
-        <form class="form" action="processa.php" method="POST">
-            <span>Login</span>
-
-            <input class="form__input" type="email" name="login" id="login" placeholder="Login" required>
-            <input class="form__input" type="password" name="senha" id="senha" placeholder="Senha" required maxlength="8">
-
-            <div class="form__btn-area">
-                <input class="form__btn" type="button" value="Registrar">
-                <input class="form__btn form__btn--action" type="submit" value="Login">
-            </div>
-        </form>
+        <div class="form" style="text-align: center;">
+            <?php if ($_SERVER['REQUEST_METHOD'] === 'POST'): ?>
+                <h2>Login recebido com sucesso!</h2>
+                <p><strong>Email:</strong> <?= htmlspecialchars($_POST['login'] ?? '', ENT_QUOTES, 'UTF-8') ?></p>
+                <p><strong>Senha:</strong> <?= htmlspecialchars($_POST['senha'] ?? '', ENT_QUOTES, 'UTF-8') ?></p>
+                <br>
+                <a href="index.html" style="color: #007bff;">Voltar ao login</a>
+            <?php else: ?>
+                <p>Acesso inválido.</p>
+                <a href="index.html" style="color: #007bff;">Voltar ao login</a>
+            <?php endif; ?>
+        </div>
     </main>
-
 
     <footer class="footer">
         <address class="footer__columns footer__endereço">
             Endereço: <br>
             Rua das Margaridas, 25 - Centro - São Paulo - SP
         </address>
-
 
         <section class="footer__columns footer__social">
             <p class="footer__social-text">Siga nos nas redes sociais:</p>
@@ -55,8 +47,6 @@
         <div class="footer__columns footer__dev">
             <p>Desenvolvido por XYZ - Soluções digitais</p>
         </div>
-
     </footer>
 </body>
-
 </html>
